@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5e0; /* Light neutral background */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.calculator {
+    width: 300px;
+    background-color: #1f2d3d; /* Dark background for the calculator */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.display {
+    background-color: #ffffff;
+    grid-column: span 4;
+    color: #000;
+    font-size: 2.5rem;
+    text-align: right;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+}
+
+.calculator button {
+    background-color: #3d4b58; /* Button color similar to the image */
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.calculator button:hover {
+    background-color: #58667f; /* Hover effect */
+}
+
+.calculator button:active {
+    transform: scale(0.95);
+}
+
+/* Special buttons styling */
+.equal { /* Green button for equal */
+    grid-column: span 3;
+    color: white;
+    background-color: #28a745; /* Green color */
+}
+
+.equal:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.clear-btn {
+    background-color: #ff3860; /* Red for clear button */
+}
+
+.clear-btn:hover {
+    background-color: #ff2230; /* Darker red */
+}
+
+.zero-btn {
+    grid-column: span 1; /* "0" button spanning across 2 columns */
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4-column layout */
+    grid-gap: 10px;
+}
+
+button:focus {
+    outline: none;
+}
